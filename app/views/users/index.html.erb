@@ -27,3 +27,14 @@
 <br>
 
 <%= link_to 'New User', new_user_path %>
+
+
+
+
+<div class = "digg_pagination">
+  <div class = "page_info">
+    
+<% @users = User.paginate(:page => params[:page]) %>
+  </div>
+  <%= will_paginate @users, :container => false%>
+</div>
