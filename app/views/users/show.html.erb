@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+<a href="<%= @user.attach.url %> ">
+  <b> File attached </b></a>
+<br/>
+<%= image_tag @user.pic.url %>
+<br/>
+<%= image_tag @user.pic.url(:medium) %>
+<br/>
+<%= image_tag @user.pic.url(:thumb) %>
+<br/>
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
